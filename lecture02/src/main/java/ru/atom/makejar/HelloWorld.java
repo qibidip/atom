@@ -1,5 +1,7 @@
 package ru.atom.makejar;
 
+import ru.atom.geometry.Point;
+
 /**
  * Class just to test fat jar packing
  */
