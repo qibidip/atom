@@ -43,7 +43,12 @@ public class Bar implements Collider {
                    && secondPoint.getX() >= point.getX()
                    && firstPoint.getY() <= point.getY()
                    && secondPoint.getY() >= point.getY();
+        } else {
+            Bar bar = (Bar) other;
+            return firstPoint.getX() <= bar.getSecondPoint().getX()
+                && bar.getFirstPoint().getX() <= secondPoint.getX()
+                && firstPoint.getY() <= bar.getSecondPoint().getY()
+                && bar.getFirstPoint().getY() <= secondPoint.getY();
         }
-        return false;
     }
 }
